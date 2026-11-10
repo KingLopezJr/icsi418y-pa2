@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import CreateProject from "./components/CreateProject";
 import ViewProjects from "./components/ViewProjects";
 import ManageMemberships from "./components/ManageMemberships";
+import UserStories from "./components/UserStories";
 
 import "./App.css";
 
@@ -48,20 +49,25 @@ function App() {
           Manage Memberships
         </button>
 
+        <button
+          onClick={() => setPage("userStories")}
+        >
+        User Stories
+        </button>
+
       </div>
 
       {page === "signup" && <Signup />}
 
       {page === "login" && <Login />}
 
-      {page === "createProject" &&
-        <CreateProject />}
+      {page === "createProject" && <CreateProject />}
 
-      {page === "projects" &&
-        <ViewProjects />}
+      {page === "projects" && <ViewProjects />}
 
-      {page === "memberships" &&
-        <ManageMemberships />}
+      {page === "memberships" && <ManageMemberships />}
+
+      {page === "userStories" && <UserStories />}
 
     </div>
   );
